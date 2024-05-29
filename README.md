@@ -71,9 +71,7 @@ end:
 
     ebreak          # End of program
 ```
-AI-generated code. Review and use carefully. More info on FAQ.
-How to Run
-To run this code:
+# How to Run:
 
 Install the Venus RISC-V simulator.
 Load the assembly code into the simulator.
