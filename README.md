@@ -74,7 +74,7 @@ The code begins by loading the number 64 into register `a0`, which is the target
 
 ### Results
 Upon execution, the program will calculate the integer square root of **64**, which is **8**. The result will be stored in register `t0`.
-
+![Screenshot (6)_Square_Root](https://github.com/seyfi1998/phoeniX_EhsanSeyfi/blob/main/Software/User_Codes/Square_Root/Screenshot%20(6).png)
 
 
 ## How to run:
