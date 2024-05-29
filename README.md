@@ -1,4 +1,4 @@
-Computer Organization - Spring 2024
+**Computer Organization - Spring 2024**
 
 #### **Iran Univeristy of Science and Technology**
 ****************************************************************************
@@ -9,7 +9,7 @@ Computer Organization - Spring 2024
 
 * Student ID: 97412229
 
-* Date:5/26/2024
+* Date: 5/26/2024
 
 ## Introduction
 The **phoeniX project** is a collaborative effort initiated in 2023 at Iran University of Science and Technology, aimed at creating a foundational processor for architectural research, with a focus on approximate computing. It simplifies the design and simulation process compared to other open-source processors on GitHub, facilitating easier access for researchers. The processor core is adaptable for implementation on various Xilinx FPGA boards and has been fully synthesized into an Integrated Circuit using the Synopsys Design Compiler and NanGate 45nm PDK.In this repository we are going to run and execute two assembly code on phoeniX RISC-V Processor.
