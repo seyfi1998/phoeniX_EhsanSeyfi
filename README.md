@@ -1,5 +1,10 @@
+Computer Organization - Spring 2024
+****************************************************************************
+#### **Iran Univeristy of Science and Technology**
+
+
 # Asembly code execution on phoeniX RISC-V core
-* Name: Ehsan Seyfibonab 
+* Name: Ehsan Seyfi Bonab
 
 * Student ID: 97412229
 
