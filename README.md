@@ -36,7 +36,7 @@ The Quick Sort algorithm is a widely used sorting technique that efficiently rea
 4. **Results**:
    - After executing this code, the sorted array (10, 13, 15) will be stored back in memory.
    - You can verify the correctness of the sorting process by examining the memory locations.
-   [https://github.com/seyfi1998/phoeniX_EhsanSeyfi/blob/main/Software/User_Codes/Quick_Sort/Screenshot%20(4).png]
+   ![Screenshot (4)_Quick_Sort](https://github.com/seyfi1998/phoeniX_EhsanSeyfi/blob/main/Software/User_Codes/Quick_Sort/Screenshot%20(4).png)
 
 
 
