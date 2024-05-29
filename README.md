@@ -62,8 +62,14 @@ end:
     ebreak          # Breakpoint for debugging
 ```
 
-Brief Explanation
+### Code function
 The code begins by loading the number 64 into register a0, which is the target number for which we want to find the square root. The counter t0 is initialized to 0. In the loop, t0 is squared and compared with a0. If the square is less than a0, the counter is incremented. Once the square of t0 is not less than a0, the loop ends, and t0 is decremented to get the final result. The ebreak instruction is used as a breakpoint for debugging purposes.
 
 Results
 Upon execution, the program will calculate the integer square root of 64, which is 8. The result will be stored in register t0.
+## How to run:
+1.Fork and clone the repository to your own GitHub
+2.install RISC-V venus simulator on visual studio code
+3.Run and debug code using Venus Simulator
+
+final outputs can be assembled using the AssembleX software
