@@ -75,7 +75,10 @@ Results
 Upon execution, the program will calculate the integer square root of 64, which is 8. The result will be stored in register t0.
 ## How to run:
 1.Fork and clone the repository to your own GitHub
+
 2.install RISC-V venus simulator on visual studio code
+
 3.Run and debug code using Venus Simulator
 
-final outputs can be assembled using the AssembleX software
+
+final outputs can be assembled using the AssembleX software.
