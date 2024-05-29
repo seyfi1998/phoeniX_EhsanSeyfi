@@ -1,6 +1,7 @@
 Computer Organization - Spring 2024
-****************************************************************************
+
 #### **Iran Univeristy of Science and Technology**
+****************************************************************************
 
 
 # Asembly code execution on phoeniX RISC-V core
@@ -45,7 +46,8 @@ The Quick Sort algorithm is a widely used sorting technique that efficiently rea
 
 
 
-## RISC-V Integer Square Root Calculator
+
+## Integer Square Root Algorithm in RISC-V Assembly
 
 ### Description
 
