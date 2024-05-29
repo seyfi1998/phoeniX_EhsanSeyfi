@@ -1,5 +1,5 @@
 # Asembly code execution on phoeniX RISC-V core
-* Name: Ehsan Seyfibonab
+* Name: Ehsan Seyfibonab 
 
 * Student ID: 97412229
 
@@ -8,12 +8,12 @@
 ## Introduction
 The **phoeniX project** is a collaborative effort initiated in 2023 at Iran University of Science and Technology, aimed at creating a foundational processor for architectural research, with a focus on approximate computing. It simplifies the design and simulation process compared to other open-source processors on GitHub, facilitating easier access for researchers. The processor core is adaptable for implementation on various Xilinx FPGA boards and has been fully synthesized into an Integrated Circuit using the Synopsys Design Compiler and NanGate 45nm PDK.In this repository we are going to run and execute two assembly code on phoeniX RISC-V Processor.
 
-# Quick Sort Algorithm in RISC-V Assembly
+## Quick Sort Algorithm in RISC-V Assembly
 
-## Description
+### Description
 The Quick Sort algorithm is a widely used sorting technique that efficiently rearranges an array or list of elements into ascending or descending order. It follows a "divide and conquer" approach, recursively partitioning the array into smaller subarrays and then combining them to achieve the final sorted result.
 
-## Algorithm Explanation
+### Algorithm Explanation
 1. **Initialization**:
    - The provided code initializes an array with three elements: **10**, **13**, and **15**.
    - These elements are stored in memory locations (addresses **12**, **8**, and **4**).
@@ -39,17 +39,17 @@ The Quick Sort algorithm is a widely used sorting technique that efficiently rea
 
 
 
-# RISC-V Integer Square Root Calculator
+## RISC-V Integer Square Root Calculator
 
-## Description
+### Description
 
 This project contains a RISC-V assembly program that efficiently computes the integer square root of a predefined number. The integer square root of a number is the largest integer that, when squared, does not exceed the original number.
 
-## Algorithm Explanation
+### Algorithm Explanation
 
 The algorithm implemented in this assembly program is a simple iterative method. It starts from zero and continues to find the square of consecutive integers until the square exceeds or is equal to the target number. The integer square root is the last integer before the square surpassed the target number.
 
-## Code
+### Code
 
 ```assembly
 li a0, 64   # Load the target number into register a0
@@ -68,7 +68,7 @@ end:
     ebreak          # Breakpoint for debugging
 ```
 
-### Code function
+#### Code function
 The code begins by loading the number 64 into register a0, which is the target number for which we want to find the square root. The counter t0 is initialized to 0. In the loop, t0 is squared and compared with a0. If the square is less than a0, the counter is incremented. Once the square of t0 is not less than a0, the loop ends, and t0 is decremented to get the final result. The ebreak instruction is used as a breakpoint for debugging purposes.
 
 Results
