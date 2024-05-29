@@ -1,44 +1,78 @@
-# Assembly Algorithms on phoeniX Core
+Certainly! Below is a concise README for your two assembly code projects. I've included a brief description, explanations of the algorithms, the code snippets, and how to run them using the Venus simulator on the PhoeniX core.
 
-This repository contains two assembly language projects designed to run on the phoeniX core using the venus simulator. The projects implement fundamental algorithms in assembly language, showcasing the efficiency and low-level control offered by assembly programming.
+---
 
-## Quick Sort Algorithm in Assembly
+# Assembly Code Projects: Quick Sort and Integer Square Root
 
-### Briefing
-The quick sort algorithm is a highly efficient sorting algorithm that uses a divide-and-conquer approach. It works by selecting a 'pivot' element from the array and partitioning the other elements into two sub-arrays, according to whether they are less than or greater than the pivot. The sub-arrays are then sorted recursively.
+## 1. Quick Sort
 
-### Description
-This project implements the quick sort algorithm in assembly language. The code is structured to choose an optimal pivot and efficiently partition the array, ensuring a fast and reliable sort.
+### Description:
+The Quick Sort algorithm efficiently sorts an array by partitioning it into smaller subarrays and recursively sorting them. It uses a "divide and conquer" approach.
 
-### Code
-The quick sort assembly code can be found in the `Quick_Sort.s` file. It includes comments explaining each step of the algorithm and the assembly instructions used.
+### Algorithm Explanation:
+1. Initialize an array with elements (10, 13, 15).
+2. Store these elements in memory locations (addresses 12, 8, and 4).
+3. Implement the Quick Sort algorithm to sort the array in ascending order.
+4. The `swap` and `change` labels handle swapping elements and comparing their values.
+5. The sorted array will be stored back in memory.
 
-### Results
-The quick sort algorithm has been tested on various arrays of integers, demonstrating its ability to sort efficiently. The results include the initial unsorted array, the steps of the algorithm, and the final sorted array.
+### Assembly Code:
+```assembly
+; Quick Sort Algorithm
+; (Code snippet provided by user)
 
-## Integer Square Root Algorithm in Assembly
+...
 
-### Briefing
-Calculating the integer square root of a number is a fundamental operation in many computational tasks. This algorithm provides the largest integer that is less than or equal to the square root of the given number.
+end:
+    ; Load sorted elements from memory
+    li a5, 12
+    li a3, 4
+    lw a0, 0(a5)
+    sub a5, a5, a3
+    lw a1, 0(a5)
+    sub a5, a5, a3
+    lw a2, 0(a5)
 
-### Description
-The integer square root algorithm in assembly language is implemented to calculate the square root of an integer without using floating-point operations. It utilizes a method similar to the 'digit-by-digit' calculation.
+    ebreak
+```
 
-### Code
-The integer square root assembly code is available in the `Square_Root.s` file. It includes detailed comments that describe the logic behind each step and the corresponding assembly instructions.
+## 2. Integer Square Root
 
-### Results
-The integer square root algorithm has been tested with a set of integers, and the results show the input number and its calculated square root. The algorithm ensures that the result is the largest integer less than or equal to the actual square root.
+### Description:
+The Integer Square Root algorithm calculates the largest integer whose square is less than or equal to a given number.
 
-## Running the Code
+### Algorithm Explanation:
+1. Initialize `t0` to 0.
+2. In a loop:
+   - Calculate the square of `t0`.
+   - If the square is greater than or equal to the input number (`a0`), exit the loop.
+   - Otherwise, increment `t0`.
+3. The final value of `t0` minus 1 gives the integer square root.
 
-To run these assembly codes on the phoeniX core using the venus simulator, follow these steps:
+### Assembly Code:
+```assembly
+; Integer Square Root Algorithm
+; (Code snippet provided by user)
 
-1. Clone the repository to your local machine.
-2. Open the venus simulator and load the `quick_sort.asm` or `int_sqrt.asm` file.
-3. Assemble and run the code to see the results.
+li a0, 64
+li t0, 0
 
-## Conclusion
+loop:
+    mul t1, t0, t0
+    bge t1, a0, end
 
-These projects demonstrate the power and precision of assembly language in implementing algorithms that are both fundamental and performance-critical. By running these codes on the phoeniX core with the venus simulator, we can observe the algorithms' behavior in a controlled environment and appreciate the intricacies of low-level programming.
+    addi t0, t0, 1
+    j loop
+
+end:
+    addi t0, t0, -1
+
+    ebreak
+```
+
+## How to Run:
+1. Install the Venus simulator.
+2. Load the respective assembly code into Venus.
+3. Execute the code to observe the results.
+
 
