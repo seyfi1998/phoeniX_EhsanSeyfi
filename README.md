@@ -1,78 +1,38 @@
-Certainly! Below is a concise README for your two assembly code projects. I've included a brief description, explanations of the algorithms, the code snippets, and how to run them using the Venus simulator on the PhoeniX core.
+I apologize for the oversight. Thank you for your patience! Here's the README for the Quick Sort algorithm in RISC-V assembly, formatted using Markdown:
 
 ---
 
-# Assembly Code Projects: Quick Sort and Integer Square Root
+# Quick Sort Algorithm in RISC-V Assembly
 
-## 1. Quick Sort
+## Description
+The Quick Sort algorithm is a widely used sorting technique that efficiently rearranges an array or list of elements into ascending or descending order. It follows a "divide and conquer" approach, recursively partitioning the array into smaller subarrays and then combining them to achieve the final sorted result.
 
-### Description:
-The Quick Sort algorithm efficiently sorts an array by partitioning it into smaller subarrays and recursively sorting them. It uses a "divide and conquer" approach.
+## Algorithm Explanation
+1. **Initialization**:
+   - The provided code initializes an array with three elements: **10**, **13**, and **15**.
+   - These elements are stored in memory locations (addresses **12**, **8**, and **4**).
 
-### Algorithm Explanation:
-1. Initialize an array with elements (10, 13, 15).
-2. Store these elements in memory locations (addresses 12, 8, and 4).
-3. Implement the Quick Sort algorithm to sort the array in ascending order.
-4. The `swap` and `change` labels handle swapping elements and comparing their values.
-5. The sorted array will be stored back in memory.
+2. **Sorting Process**:
+   - The Quick Sort algorithm begins by selecting a **pivot element** (in this case, the first element in the array).
+   - It then partitions the array into two subarrays:
+     - Elements less than or equal to the pivot (to the left).
+     - Elements greater than the pivot (to the right).
+   - Recursively apply Quick Sort to both subarrays.
+   - The sorted subarrays are then combined to form the final sorted array.
 
-### Assembly Code:
-```assembly
-; Quick Sort Algorithm
-; (Code snippet provided by user)
+3. **Code Details**:
+   - The provided code uses registers `a0`, `a1`, `a2`, `a3`, `a4`, `a5`, `t0`, `t1`, and `t2`.
+   - Labels such as `swap`, `change`, and `var` handle different steps of the sorting process.
+   - The `lw` (load word) and `sw` (store word) instructions read from and write to memory, respectively.
+   - The `beq` (branch if equal) instruction controls program flow based on conditions.
+   - The `ebreak` instruction indicates the end of the program.
 
-...
+4. **Results**:
+   - After executing this code, the sorted array (10, 13, 15) will be stored back in memory.
+   - You can verify the correctness of the sorting process by examining the memory locations.
 
-end:
-    ; Load sorted elements from memory
-    li a5, 12
-    li a3, 4
-    lw a0, 0(a5)
-    sub a5, a5, a3
-    lw a1, 0(a5)
-    sub a5, a5, a3
-    lw a2, 0(a5)
-
-    ebreak
-```
-
-## 2. Integer Square Root
-
-### Description:
-The Integer Square Root algorithm calculates the largest integer whose square is less than or equal to a given number.
-
-### Algorithm Explanation:
-1. Initialize `t0` to 0.
-2. In a loop:
-   - Calculate the square of `t0`.
-   - If the square is greater than or equal to the input number (`a0`), exit the loop.
-   - Otherwise, increment `t0`.
-3. The final value of `t0` minus 1 gives the integer square root.
-
-### Assembly Code:
-```assembly
-; Integer Square Root Algorithm
-; (Code snippet provided by user)
-
-li a0, 64
-li t0, 0
-
-loop:
-    mul t1, t0, t0
-    bge t1, a0, end
-
-    addi t0, t0, 1
-    j loop
-
-end:
-    addi t0, t0, -1
-
-    ebreak
-```
-
-## How to Run:
-1. Install the Venus simulator.
-2. Load the respective assembly code into Venus.
-3. Execute the code to observe the results.
-
+## How to Run
+1. Install the Venus RISC-V simulator.
+2. Load this assembly code into Venus.
+3. Execute the code to observe the sorting process and results.
 
