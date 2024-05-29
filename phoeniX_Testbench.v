@@ -2,7 +2,7 @@
 `include "phoeniX.v"
 
 `ifndef FIRMWARE
-    `define FIRMWARE "Software\\User_Codes\\Quick_Sort\\Quick_Sort_firmware.hex"
+    `define FIRMWARE "Software\\User_Codes\\Square_Root\\Square_Root_firmware.hex"
 `endif /*FIRMWARE*/
 
 `ifndef START_ADDRESS
