@@ -33,49 +33,37 @@ The Quick Sort algorithm is a widely used sorting technique that efficiently rea
 
 
 
-Integer Square Root Calculation in RISC-V Assembly
-Description
-This RISC-V assembly code snippet calculates the integer square root of a given number. The integer square root of a number is the largest integer whose square is less than or equal to the number.
+# RISC-V Integer Square Root Calculator
 
-Algorithm Explanation
-The algorithm works by incrementally testing integers starting from 0 until it finds the largest integer whose square is less than or equal to the input number.
+## Description
 
-Initialization:
-a0 is initialized with the input number, in this case, 64.
-t0 is used as the counter and is initialized to 0.
-Loop:
-The loop begins and t0 is squared and stored in t1.
-If t1 (the square of t0) is greater than or equal to a0, the loop ends.
-If not, t0 is incremented by 1 and the loop continues.
-End:
-Once the condition is met, t0 is decremented by 1 to get the integer square root.
-The ebreak instruction is used to terminate the program.
-Code Snippet
-Assembly
+This project contains a RISC-V assembly program that efficiently computes the integer square root of a predefined number. The integer square root of a number is the largest integer that, when squared, does not exceed the original number.
 
-# Calculate Integer Square Root
-```
-li a0, 64  # Initialize input number
+## Algorithm Explanation
 
-li t0, 0   # Initialize counter
+The algorithm implemented in this assembly program is a simple iterative method. It starts from zero and continues to find the square of consecutive integers until the square exceeds or is equal to the target number. The integer square root is the last integer before the square surpassed the target number.
+
+## Code
+
+```assembly
+li a0, 64   # Load the target number into register a0
+li t0, 0    # Initialize the counter to 0
 
 loop:
-    mul t1, t0, t0  # Square the counter
-    bge t1, a0, end # Check if the square is greater than the input
+    mul t1, t0, t0  # Multiply the counter by itself
+    bge t1, a0, end # If the square is greater than or equal to the target, exit the loop
 
-    addi t0, t0, 1  # Increment counter
-    j loop          # Continue loop
+    addi t0, t0, 1  # Increment the counter
+    j loop          # Jump back to the start of the loop
 
 end:
-    addi t0, t0, -1 # Decrement counter to get the integer square root
+    addi t0, t0, -1 # Decrement the counter to get the integer square root
 
-    ebreak          # End of program
+    ebreak          # Breakpoint for debugging
 ```
-# How to Run:
 
-Install the Venus RISC-V simulator.
-Load the assembly code into the simulator.
-Execute the code to calculate the integer square root of the input number.
-Conclusion
-This simple yet effective algorithm demonstrates the power of assembly language for performing low-level arithmetic operations efficiently. The code can be adapted for different input numbers by changing the value of a0.
+Brief Explanation
+The code begins by loading the number 64 into register a0, which is the target number for which we want to find the square root. The counter t0 is initialized to 0. In the loop, t0 is squared and compared with a0. If the square is less than a0, the counter is incremented. Once the square of t0 is not less than a0, the loop ends, and t0 is decremented to get the final result. The ebreak instruction is used as a breakpoint for debugging purposes.
 
+Results
+Upon execution, the program will calculate the integer square root of 64, which is 8. The result will be stored in register t0.
