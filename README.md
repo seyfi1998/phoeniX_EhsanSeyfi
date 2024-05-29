@@ -54,6 +54,7 @@ Code Snippet
 Assembly
 
 # Calculate Integer Square Root
+```
 li a0, 64  # Initialize input number
 
 li t0, 0   # Initialize counter
@@ -69,6 +70,7 @@ end:
     addi t0, t0, -1 # Decrement counter to get the integer square root
 
     ebreak          # End of program
+```
 AI-generated code. Review and use carefully. More info on FAQ.
 How to Run
 To run this code:
